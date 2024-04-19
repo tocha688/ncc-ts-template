@@ -45,7 +45,7 @@ function compile() {
         }
         //输出资源文件
         Object.keys(assets).forEach(key => {
-            const _filepath = path.join(nccTempPath, key);
+            const _filepath = path.join(outPath, key);
             fstool.mkdirsSync(path.dirname(_filepath))
             fs.writeFileSync(_filepath, assets[key].source)
         })
