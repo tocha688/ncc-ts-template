@@ -1,31 +1,21 @@
 {
   "name": "ncc-ts-template",
   "version": "1.0.0",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
-  "types": "lib/index.d.ts",
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup & node ./build/index.js",
-    "build:encode": "tsup & node ./build/index.js -e",
-    "build:pkg": "tsup & node ./build/index.js -b",
+    "dev": "nodemon src/index.ts",
+    "build": "node ./build/index.js",
+    "build:encode": "node ./build/index.js -e",
+    "build:pkg": "node ./build/index.js -b",
     "format": "prettier --write '**/*.{js,ts,jsx,tsx,json,yml,yaml,md,html}' --ignore-path .gitignore",
     "lint": "eslint ."
-  },
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.js"
-    }
   },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.12.7",
-    "tsup": "^8.0.2",
+    "@vercel/ncc": "^0.38.1",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@vercel/ncc": "^0.38.1"
+    "nodemon": "^3.1.0"
   }
 }

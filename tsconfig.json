@@ -7,7 +7,7 @@
         "moduleResolution": "node",
         "rootDir": "./src",
         "outDir": "./lib",
-        "declaration": true,
+        "declaration": false,
         "resolveJsonModule": true,
         "noEmitOnError": true,
         "esModuleInterop": true,

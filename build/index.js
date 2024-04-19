@@ -3,7 +3,7 @@ const fs = require("fs")
 const fstool = require("./fstool")
 const NCC = require('@vercel/ncc');
 
-const buildMain = path.join(process.cwd(), "/lib/index.js");
+const buildMain = path.join(process.cwd(), "/src/index.ts");
 const outputPath = path.join(process.cwd(), "/dist");
 const nccTempPath = path.join(outputPath, "/.ncc")
 //-e加密 -b打包build
